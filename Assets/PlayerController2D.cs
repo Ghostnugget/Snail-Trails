@@ -6,9 +6,13 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-    public float moveSpeed = .1f;
+    public float baseSpeed = .1f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private float moveSpeed = 0f;
+    private float speedMultWhenStopped = 0f;
+    private float speedMultWhenSlow = 0.5f;
+    private float speedMultWhenNormal = 1f;
 
     void Start()
     {
@@ -22,18 +26,20 @@ public class PlayerController2D : MonoBehaviour
         if (UnityEngine.Random.value > 0.99)
         {
             int modifier = UnityEngine.Random.Range(1, 4);
+            float randomMult = UnityEngine.Random.value;
+
             switch (modifier)
             {
                 case 1:
-                    moveSpeed = 0;
+                    moveSpeed = baseSpeed * speedMultWhenStopped * randomMult;
                     break;
 
                 case 2:
-                    moveSpeed = UnityEngine.Random.value * 0.5f;
+                    moveSpeed = baseSpeed * speedMultWhenSlow * randomMult;
                     break;
 
                 case 3:
-                    moveSpeed = UnityEngine.Random.value;
+                    moveSpeed = baseSpeed * speedMultWhenNormal * randomMult;
                     break;
 
                 default: 
