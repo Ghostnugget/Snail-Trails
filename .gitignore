@@ -1,6 +1,19 @@
+# Unity-specific files and folders
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/Logs/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Visual Studio / Rider / VS Code generated files
+.vs/
+.vscode/
+.idea/
+*.sln
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj

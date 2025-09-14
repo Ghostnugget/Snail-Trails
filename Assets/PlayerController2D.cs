@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
@@ -56,4 +57,11 @@ public class PlayerController2D : MonoBehaviour
     }
 }
 
-// Spray Bottle, randomly change directions, Obstacles, Nametags, Betting, Start/Finish Line, Different Maps, Snail Personalities, Outline for Snails - Shader
+
+// Tier 0.5 () Nametags - some way to distinguish them? Character Selection?, Outline for Snails - Shader
+// Tier 1 (4 directional movement): randomly change directions - make it more likely they go right
+// Tier 1.5 (almost ready): Start/Finish Line
+//: Obstacles (dynamic vs static?, do obstacles move?, randomly generated?)
+
+
+// Tier 3 (major features): Betting, Spray Bottle, (Character customization/selection, User enters their names and chooses a color, Snail Personalities?), (Different Maps - Map selection screen)
